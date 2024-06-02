@@ -1,12 +1,14 @@
-interface Props{
-    cartItemsCount:number;
-}
+import { HStack,Image, Text } from "@chakra-ui/react"
+import logo from '../assets/logo.webp'
 
-const NavBar = ({cartItemsCount}:Props) => {
+const NavBar = () => {
   
   return (
     <>
-    <div>NavBar:{cartItemsCount}</div>
+    <HStack >
+      <Image src={logo} boxSize="60px"/>
+      <Text >Nav Bar</Text>
+    </HStack>
     </>
   )
 }
