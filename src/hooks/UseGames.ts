@@ -19,10 +19,12 @@ interface FetchGamesResponse {
   count: number;
   results: Game[];
 }
-const UseGames = () => {
+
+const useGames = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
+
 
   useEffect(() => {
     const controller = new AbortController();
@@ -43,4 +45,4 @@ const UseGames = () => {
   return { games, error,isLoading };
 };
 
-export default UseGames;
+export default useGames;
